@@ -15,7 +15,7 @@ class Server:
     def checkData(self):
         try: 
             client, clientInfo = self.socket.recv(self.size)
-            data = client.recv(size)
+            data = client.recv(self.size)
             if data: 
                 print(data)
                 client.send(data) #echo
