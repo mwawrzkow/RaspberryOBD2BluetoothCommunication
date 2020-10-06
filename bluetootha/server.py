@@ -2,11 +2,11 @@ import bluetooth
 
 class Server: 
     def __init__(self):
-        self.hostMACAddress = ''
+        self.hostMACAddress = ""
         self.port = 3  
         self.size = 1024
         self.backlog = 1 
-        self.socket = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
+        self.socket = bluetooth.BluetoothSocket(bluetooth.L2CAP)
 
     def init(self): 
         self.socket.bind((self.hostMACAddress,self.port))
@@ -15,6 +15,7 @@ class Server:
     def checkData(self):
         try: 
             client, clientInfo = self.socket.recv(self.size)
+            print("Accepted connection from", clientInfo)
             data = client.recv(self.size)
             if data: 
                 print(data)
