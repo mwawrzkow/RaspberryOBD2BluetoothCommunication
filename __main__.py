@@ -4,7 +4,7 @@ server_sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
 # port = bluetooth._get_available_ports( bluetooth.RFCOMM )
 server_sock.bind(("",0))
 server_sock.listen(1)
-print ("listening on port: " + 0)
+print ("listening on port: 0")
 
 uuid = "1e0ca4ea-299d-4335-93eb-27fcfe7fa848"
 bluetooth.advertise_service( server_sock, "FooBar Service", uuid )
