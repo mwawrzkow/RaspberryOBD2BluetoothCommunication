@@ -3,4 +3,3 @@ def RequestAction(Action, OBD):
     if Action == b"Connect":
         Result = OBD.ConnectToOBD()
     return Result
-        pass
