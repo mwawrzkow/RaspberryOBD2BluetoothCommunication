@@ -1,4 +1,4 @@
-import BluetoothSocket as bs
+# import BluetoothSocket as bs
 import bluetooth
 import ConnectionAutomatize
 import os
