@@ -29,8 +29,8 @@ while data != b"Exit":
         client_sock.send(b"Accept")
         wd = bluetoothWatchDog.Watchdog(client_sock)
         data = wd.waitForData()
-        ConnectionAutomatize.RequestAction(data,obd2)
-        wd.sendData()
+        response =ConnectionAutomatize.RequestAction(data,obd2)
+        wd.sendData(response)
 
             
 
