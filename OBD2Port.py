@@ -6,5 +6,8 @@ class OBDInterpreter(object):
     """
     def ConnectToOBD(self):
         self.Connection = obd.OBD()
-        return OBDStatus == OBDStatus.CAR_CONNECTED if "Samochod jest podlaczony" else "Samochod nie jest podlaczony"
+        if OBDStatus == OBDStatus.CAR_CONNECTED:
+            return "Samochod jest podlaczony" 
+        else:
+            return "Samochod nie jest podlaczony"
     pass
