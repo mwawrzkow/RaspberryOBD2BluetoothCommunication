@@ -26,7 +26,7 @@ while data != b"Exit":
     if data == b"EnX88hsumpCFAqBxr#ckpL!7X7G+eDCEyLGq!Bc?X-^s5$BJm*PGfD!tnBtj7f8B@5!XL=Bu#?8p$sAeWUMK=2+5HAXBe9=VhTwE":
         print("Connection accepted")
         client_sock.send(b"Accept")
-        wd = Watchdog(client_sock)
+        wd = bluetoothWatchDog.Watchdog(client_sock)
         data = wd.waitForData()
         ConnectionAutomatize.RequestAction(data,obd2)
         wd.sendData()
