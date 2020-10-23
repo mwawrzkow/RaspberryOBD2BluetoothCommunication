@@ -17,6 +17,7 @@ print ("listening on port: 0")
 uuid = "5dc85d5b-4bdd-40ca-ab9c-c700c088c6c4"
 bluetooth.advertise_service( server_sock, "FooBar Service", uuid )
 obd2 = OBD2Port.OBDInterpreter()
+data = "" 
 while data != b"Exit":
     client_sock,address = server_sock.accept()
     print ("Accepted connection from :")
