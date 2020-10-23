@@ -3,6 +3,7 @@ import bluetooth
 import ConnectionAutomatize
 import os
 import OBD2Port
+import bluetoothWatchDog
 
 if os.system("hciconfig hci0 piscan") == -1:
     print("Run it as root!")
